@@ -122,7 +122,6 @@ wordsDF("word").getClass
 
 // COMMAND ----------
 
-import org.apache.spark.sql._
 def removePunctuation(column: Column): Column = {
   var no_punc = regexp_replace(column, "\\p{Punct}", "")
   var trim_col = trim(no_punc)
